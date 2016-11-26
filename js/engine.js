@@ -83,15 +83,41 @@ var Engine = (function(global) {
         checkCollisions();
     }
 
+    /* This function is called to check game collisions: Player with enemies,
+     * and player with water.
+     */
     function checkCollisions() {
         allEnemies.forEach(function(enemy) {
             if (player.collidesWith(enemy)) {
-                player.reset();
+                gameover = true;
+                reset();
             }
         });
         
         if (player.hitsWater()) {
-            player.reset();
+            score++;
+            congratulations.show();
+            reset();
+            increaseDificulty();
+        }
+    }
+
+    // Whenever the player reaches its goal, this function is called.
+    function increaseDificulty() {
+        allEnemies.forEach(function(enemy) {
+            enemy.increaseDificulty();
+        });        
+    }
+
+    /* This function renders the UI components: score, congratulations and 
+     * gameover.
+     */
+    function renderUI() {
+        scoreUI.render();
+        congratulations.render();
+
+        if (gameover) {
+            gameoverUI.render();
         }
     }
 
@@ -106,7 +132,7 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        player.update();
+        congratulations.update(dt);
     }
 
     /* This function initially draws the "game level", it will then call
@@ -149,6 +175,7 @@ var Engine = (function(global) {
         }
 
         renderEntities();
+        renderUI();
     }
 
     /* This function is called by the render function and is called on each game
@@ -166,12 +193,11 @@ var Engine = (function(global) {
         player.render();
     }
 
-    /* This function does nothing but it could have been a good place to
-     * handle game reset states - maybe a new game menu or a game over screen
-     * those sorts of things. It's only called once by the init() method.
+    /* This function replaces the player on its initial position, whenever the
+     * player hits its goal or it collides with an enemy.
      */
     function reset() {
-        // noop
+        player.reset();
     }
 
     /* Go ahead and load all of the images we know we're going to need to
@@ -183,7 +209,9 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/congratulations.png',
+        'images/game-over.png'
     ]);
     Resources.onReady(init);
 
