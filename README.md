@@ -1,6 +1,7 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This is a frogger like game. The player is intended to cross a scenario, avoiding enemies, trying to reach a goal (water). Every time it reaches its goal, the enemies speed is increased and it scores a point. It an enemy collides with the player, the game if over, and the player can restart and try again.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Running the Game
+
+In order to run the game, the user just needs to open the index.html on a modern browser (with HTML5 support, eg. Chrome).
