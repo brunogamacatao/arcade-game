@@ -7,7 +7,7 @@ This is a frogger like game. The player is intended to cross a scenario, avoidin
 This game is fully implemented in client-side JavaScript, so you don't need to perform any complex setup. In order to run it, you'll need to:
 
 * Clone this repository (`git clone https://github.com/brunogamacatao/arcade-game`) or [download](https://github.com/brunogamacatao/arcade-game/archive/master.zip) and unzip its zip;
-* Double click on the index.html file (or open it on any modern browser with HTML5 support).
+* Double click on `arcade-game/index.html` file (or open it on any modern browser with HTML5 support).
 
 ## Screenshots
 
