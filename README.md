@@ -8,3 +8,9 @@ This game is fully implemented in client-side JavaScript, so you don't need to p
 
 * Clone this repository (`git clone https://github.com/brunogamacatao/arcade-game`) or [download](https://github.com/brunogamacatao/arcade-game/archive/master.zip) and unzip its zip;
 * Double click on the index.html file (or open it on any modern browser with HTML5 support).
+
+## Screenshots
+
+[In game screenshot](https://github.com/brunogamacatao/arcade-game/blob/master/screenshots/shot1.png?raw=true)
+
+[Game Over screen](https://github.com/brunogamacatao/arcade-game/blob/master/screenshots/shot2.png?raw=true)
