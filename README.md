@@ -11,6 +11,6 @@ This game is fully implemented in client-side JavaScript, so you don't need to p
 
 ## Screenshots
 
-[In game screenshot](https://github.com/brunogamacatao/arcade-game/blob/master/screenshots/shot1.png?raw=true)
+![In game screenshot](https://github.com/brunogamacatao/arcade-game/blob/master/screenshots/shot1.png?raw=true "In game screenshot")
 
-[Game Over screen](https://github.com/brunogamacatao/arcade-game/blob/master/screenshots/shot2.png?raw=true)
+![Game Over screen](https://github.com/brunogamacatao/arcade-game/blob/master/screenshots/shot2.png?raw=true "Game Over screen")
